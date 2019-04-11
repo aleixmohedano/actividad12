@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/bin/python3 SEWASWA BOBOBO
 def showInstructions():
     #print a main menu and the commands
     print('''
