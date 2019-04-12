@@ -30,7 +30,7 @@ def showStatus():
     print('You see a ' + rooms[currentRoom]['item'])
   print("---------------------------")
 #an inventory, which is initially empty
-inventory = ['dakimakura']
+inventory = []
 #a dictionary linking a room to other room positions
 rooms = {
             'Hall' : { 'south' : 'Kitchen',
@@ -51,7 +51,7 @@ rooms = {
             'Garden' : { 'north' : 'Dining Room' },
             
             'habitacion del Milia' : {'item' : 'Anime',
-                  'item' : 'dakimakura'
+                  'item' : 'dakimakuraa'
               }
          }
 #start the player in the Hall
