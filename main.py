@@ -18,16 +18,25 @@ def showStatus():
   #print the current inventory
   print("Inventory : " + str(inventory))
   #print an item if there is one
+  if "south" in rooms[currentRoom]:
+    print('south : '+ rooms[currentRoom]['south'])
+  if "east" in rooms[currentRoom]:
+    print('east : '+ rooms[currentRoom]['east'])
+  if "north" in rooms[currentRoom]:
+    print('north : '+ rooms[currentRoom]['north'])
+  if "west" in rooms[currentRoom]:
+    print('west : '+ rooms[currentRoom]['west'])
   if "item" in rooms[currentRoom]:
     print('You see a ' + rooms[currentRoom]['item'])
   print("---------------------------")
 #an inventory, which is initially empty
-inventory = []
+inventory = ['dakimakura']
 #a dictionary linking a room to other room positions
 rooms = {
             'Hall' : { 'south' : 'Kitchen',
                   'east'  : 'Dining Room',
-                  'item'  : 'key'
+                  'item'  : 'key',
+                  'south' : 'habitacion del Milia'
                 },        
             'Kitchen' : { 'north' : 'Hall',
                   'item'  : 'monster'
@@ -39,7 +48,11 @@ rooms = {
               
                 },
                 
-            'Garden' : { 'north' : 'Dining Room' }
+            'Garden' : { 'north' : 'Dining Room' },
+            
+            'habitacion del Milia' : {'item' : 'Anime',
+                  'item' : 'dakimakura'
+              }
          }
 #start the player in the Hall
 currentRoom = 'Hall'
@@ -79,11 +92,19 @@ while True:
     else:
       #tell them they can't get it
       print('Can\'t get ' + move[1] + '!')
+  
   # player loses if they enter a room with a monster
   if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
     print('A monster has got you... GAME OVER!')
     break
   # player wins if they get to the garden with a key and a shield
-  if currentRoom == 'Garden' and 'key' in inventory and 'potion' in inventory:
-    print('You escaped the house... YOU WIN!')
+  if currentRoom == 'habitacion del Milia':
+    print('Ves al dueño de la habitacion')
+    print('El tio estaba viendo anime, al verte cambia rapido de pestaña')
+    print('ahora que sabes mi secreto no te puedo dejar ir...')
+    print('Se te abalanza con un dakimakura y empieza a asfixiarte ')
+    print('''           GAME OVER
+    no subestimes a los otakus de closet
+            ''')
+
     break
