@@ -27,7 +27,8 @@ def showStatus():
   if "west" in rooms[currentRoom]:
     print('west : '+ rooms[currentRoom]['west'])
   if "item" in rooms[currentRoom]:
-    print('You see a ' + rooms[currentRoom]['item'])
+    for element in rooms[currentRoom]["item"]:
+      print('You see a ' + element)
   print("---------------------------")
 #an inventory, which is initially empty
 inventory = []
@@ -35,8 +36,8 @@ inventory = []
 rooms = {
             'Hall' : { 'south' : 'Kitchen',
                   'east'  : 'Dining Room',
-                  'item'  : 'key',
-                  'south' : 'habitacion del Milia'
+                  'item'  : ["key","hola"],
+                  
                 },        
             'Kitchen' : { 'north' : 'Hall',
                   'item'  : 'monster'
@@ -50,9 +51,8 @@ rooms = {
                 
             'Garden' : { 'north' : 'Dining Room' },
             
-            'habitacion del Milia' : {'item' : 'Anime',
-                  'item' : 'dakimakuraa'
-              }
+
+            
          }
 #start the player in the Hall
 currentRoom = 'Hall'
@@ -92,19 +92,13 @@ while True:
     else:
       #tell them they can't get it
       print('Can\'t get ' + move[1] + '!')
+
   
   # player loses if they enter a room with a monster
   if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
     print('A monster has got you... GAME OVER!')
     break
   # player wins if they get to the garden with a key and a shield
-  if currentRoom == 'habitacion del Milia':
-    print('Ves al dueño de la habitacion')
-    print('El tio estaba viendo anime, al verte cambia rapido de pestaña')
-    print('ahora que sabes mi secreto no te puedo dejar ir...')
-    print('Se te abalanza con un dakimakura y empieza a asfixiarte ')
-    print('''           GAME OVER
-    no subestimes a los otakus de closet
-            ''')
+  
 
-    break
+    
