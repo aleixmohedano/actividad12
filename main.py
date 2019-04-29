@@ -80,14 +80,16 @@ while True:
       print('You can\'t go that way!')
   #if they type 'get' first 
   if move[0] == 'get' :
+
     #if the room contains an item, and the item is the one they want to get
     if 'item' in rooms[currentRoom] and move[1] in rooms[currentRoom]['item']:
       #add the item to their inventory
       inventory += [move[1]]
       #display a helpful message
       print(move[1] + ' got!')
+      print(rooms[currentRoom]["item"][0])
       #delete the item from the room
-      del rooms[currentRoom]['item']
+      del rooms[currentRoom]["item"][rooms[currentRoom]["item"].index(move[1])]
     #otherwise, if the item isn't there to get
     else:
       #tell them they can't get it
