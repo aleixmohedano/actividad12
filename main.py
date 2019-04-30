@@ -52,7 +52,35 @@ rooms = {
                 
             'Garden' : { 'north' : 'Dining Room' },
             
+            # HABITACIONES DE cdeveloper ###### v
+            # Puedes ver o tumbarte en la tumbona, si te tumbas, mueres, si la ves, no hace nada
+            # Si lo enciendes no pasa nada, si lo miras, se te cae y mueres
+            'Sala de descanso' : { 'item' : ["tumbona","altavoz"],
+                  'este' : 'Salón'
+              },
+            # Si comes el pan bimbo te curas y sale un oso mágico que te concede 1 deseo, y puedes elegir. Que muera el otaku, ser Lv35 Boss mafia, Liberar al oso. Si liberas al oso, tienes una vida extra, si eres Lv35 boss mafia ganas el juego, si haces que muera el otaku, te mueres tu
+            # Lo coges y es un ingrediente para mezclar con "Legia" pero solo podrás hacerlo en la "Cocina".
+            # Escoba mágica, te lleva al "Ático"
+            # Te lo pegas en la frente, y ya está.  
+              'Despensa' : { 'item' : ["pan bimbo","Chocapic","Escoba mágica","Cromo de Doraemon"],
+                  'norte' : 'Cocina',
+            # Lo coges y es un ingrediente para mezclar con "Legia" pero solo podrás hacerlo en la "Cocina".
+            # Escoba mágica, te lleva al "Ático"
+            # Te lo pegas en la frente, y ya está.
+              },
+            # La coges, si la usas en el "ático" bajas al "jardín", si la usas en algun "baño" mueres.
+            # Puedes matar al "Otaku Monster", si la coges y te lo encuentras, si no la coges, mueres (Ya que llega el "monsterOtaku" y te mato).
+            # Lo coges y es un ingrediente para mezclar con "Chocapic" pero solo podrás hacerlo en la "Cocina".    
+            # Si le pones una luz, lo puedes encender si lo coges y lo tienes contigo encendido todo el rato. 
+              'Sala de esclavos' : { 'item' : ["soga","espada láser","legia","candelabro"],
+                'norte' : 'Jardín'
+              },
+            # Si coges el paraguas y bajas por las escaleras, mueres.
+            # Si l ocoges y te tiras por el balcón, mueres.
+              'Atico' : { 'item' : ["paragüas", "paracaidas"]
+              },
 
+            # HABITACIONES DE cdeveloper ####### ^
             
          }
 #start the player in the Hall
