@@ -1,6 +1,6 @@
 #!/bin/python3 SE
 #activar cdeveloper
-#activar sdeveloper
+#activar D I O S (OSEA SDVELOPER)
 def showInstructions():
     #print a main menu and the commands
     print('''
