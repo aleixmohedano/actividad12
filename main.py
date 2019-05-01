@@ -1,5 +1,6 @@
 #!/bin/python3 SE
 #activar cdeveloper
+#activar sdeveloper
 def showInstructions():
     #print a main menu and the commands
     print('''
@@ -35,22 +36,23 @@ def showStatus():
 inventory = []
 #a dictionary linking a room to other room positions
 rooms = {
-            'Hall' : { 'south' : 'Kitchen',
-                  'east'  : 'Dining Room',
+            'Hall' : { 'sur' : 'Kitchen',
+                  'este'  : 'Dining Room',
                   'item'  : ["key","reloj"],
                   
                 },        
-            'Kitchen' : { 'north' : 'Hall',
-                  'item'  : 'monster'
+            'Cocina' : { 'norte' : 'Hall',
+                  'sur' : 'Despensa',
+                  'item'  : ["sopa","monstro"]
                 },
                 
-            'Dining Room' : { 'west'  : 'Hall',
-                  'south' : 'Garden',
+            'Comedor' : { 'oeste'  : 'Hall',
+                  'Sur' : 'Garden',
                   'item'  : 'potion'
               
                 },
                 
-            'Garden' : { 'north' : 'Dining Room' },
+            'Garden' : { 'norte' : 'Dining Room' },
             
             # HABITACIONES DE cdeveloper ###### v
             # Puedes ver o tumbarte en la tumbona, si te tumbas, mueres, si la ves, no hace nada
