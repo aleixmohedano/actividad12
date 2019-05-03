@@ -120,16 +120,24 @@ rooms = {
             # Lo coges y es un ingrediente para mezclar con "Chocapic" pero solo podrás hacerlo en la "Cocina".    
             # Si le pones una luz, lo puedes encender si lo coges y lo tienes contigo encendido todo el rato. 
               'Sala de esclavos' : { 'item' : ["soga","espada láser","legia","candelabro"],
-                'norte' : 'Jardín'
+                'norte' : 'jardin'
               },
             # Si coges el paraguas y bajas por las escaleras, mueres.
             # Si l ocoges y te tiras por el balcón, mueres.
-              'Atico' : { 'item' : ["paragüas", "paracaidas"]
-              },
+             #HABITACIONES DE CDEVELOPER
 
-            # HABITACIONES DE cdeveloper ####### ^
-            
+		'Atico' : 
+              'Habitacion del Milia' : { 'item' : ["papelera","anime","hentai"],
+      	       'oeste' : 'corridor'
+		},
+	      'Corridor' : {  'sur' : 'Habitacion del Milia', 
+		'norte' : 'Atico',
+		'oeste' : 'Employee Room',
+		'sur' : 'Recibidor'
+	        },
+		#HABITACIUONES DEL DIOS S N V 99
          }
+
 #start the player in the Hall
 currentRoom = 'Hall'
 showInstructions()
