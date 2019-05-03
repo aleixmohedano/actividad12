@@ -1,6 +1,20 @@
 #!/bin/python3 SE
+<<<<<<< HEAD
 #activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA
 >>>>>>> 9c83d9f0a1f7cea5dfa4af89f21548c910bc4e04
+=======
+#activar cdeveloper
+<<<<<<< HEAD
+<<<<<<< HEAD
+#activar D I O S (OSEA SDVELOPER)
+=======
+#activar sdeveloper
+#activar mdeveloper
+>>>>>>> origin/mdeveloper
+=======
+#actividad adeveloper
+>>>>>>> origin/adeveloper
+>>>>>>> 962f749582769e96e907932db9d7601c8bff6b2f
 def showInstructions():
     #print a main menu and the commands
     print('''
