@@ -1,7 +1,16 @@
 #!/bin/python3 SE
 #activar cdeveloper
+<<<<<<< HEAD
 #activar SDVELOPER
 #activar mdeveloper
+=======
+<<<<<<< HEAD
+#activar D I O S (OSEA SDVELOPER)
+=======
+#activar sdeveloper
+#activar mdeveloper
+>>>>>>> origin/mdeveloper
+>>>>>>> 9c83d9f0a1f7cea5dfa4af89f21548c910bc4e04
 def showInstructions():
     #print a main menu and the commands
     print('''
@@ -37,6 +46,46 @@ def showStatus():
 inventory = []
 #a dictionary linking a room to other room positions
 rooms = {
+                 #Habitaciones Manu
+            'Bathroom1' : {'east' : 'Corridor',
+            #cortaran la cuerda que cierra el armario
+                           'item1' : 'tijeras',
+                #al usarlo pillas el tetano el cortauñas
+                           'item2' : 'cortauñas'
+                },
+
+            'Bathroom2' : {'west' : 'Dining Room',
+                #tendras que usar las tijeras para cortar la cuerda del armario
+                            'item1': 'armario',
+                #aun no tengo pensado uso ya lo hablaremos
+                            'item2' : 'rollo de papel',
+                #si se junta con el mechero se podra quemar una cuerda de plastico duro que cierra un armario en la employe room
+                            'item3' : 'desodorante',
+                #no tendra ningun usp
+                            'item4' : 'repelente para osos',
+
+                            },
+
+            'Broom' : { 'east' : 'Corridor',
+                #junto a el desodorante e podra quemar una cuerda de plastico duro que cierra un armario en la employee room
+                           'item1' : 'mechero',
+                #al usarlo pillas el tetano el cortauñas
+                           'item2' : 'cortauñas',
+
+            },
+
+            'Employee Room' {'east' : 'Corridor',
+                 #tendras que usar el mechero junto al desodorante para quemar la cuerda de plastico duro que cierra la puerta
+                            'item1': 'armario',
+                 #dentro del armario abra un cuchillo (falta saber un uso)
+                            'item2' : 'cuchillo',
+                 #dentro del armario abra tambien un liquido que si lo tomas dara sobredosis
+                            'item3' : 'liquido',
+                 #dentro del armario abra una llave (pendiente de uso)
+                            'item4' : 'llave',
+            }
+
+
             'Hall' : { 'sur' : 'Kitchen',
                   'este'  : 'Dining Room',
                   'item'  : ["key","reloj"],
