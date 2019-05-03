@@ -126,7 +126,8 @@ rooms = {
             # Si l ocoges y te tiras por el balcón, mueres.
              #HABITACIONES DE CDEVELOPER
 
-		'Atico' : 
+		'Atico' : {'item' : 'cofre' },
+
               'Habitacion del Milia' : { 'item' : ["papelera","anime","hentai"],
       	       'oeste' : 'corridor'
 		},
