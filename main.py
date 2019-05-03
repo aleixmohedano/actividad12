@@ -47,34 +47,22 @@ inventory = []
 #a dictionary linking a room to other room positions
 rooms = {
                  #Habitaciones Manu
-            'Bathroom1' : {'east' : 'Corridor',
-            #cortaran la cuerda que cierra el armario
-                           'item1' : 'tijeras',
-                #al usarlo pillas el tetano el cortauñas
-                           'item2' : 'cortauñas'
+            'Baño altura' : {'este' : 'Pasillo',
+                           'item'  : ["tijeras","cortauñas"]
                 },
 
-            'Bathroom2' : {'west' : 'Dining Room',
+            'baño inferior' : {'oeste' : 'Comedor',
                 #tendras que usar las tijeras para cortar la cuerda del armario
-                            'item1': 'armario',
-                #aun no tengo pensado uso ya lo hablaremos
-                            'item2' : 'rollo de papel',
-                #si se junta con el mechero se podra quemar una cuerda de plastico duro que cierra un armario en la employe room
-                            'item3' : 'desodorante',
-                #no tendra ningun usp
-                            'item4' : 'repelente para osos',
-
+                            'item'  : ["desodorante","rollo de papel"]
                             },
 
-            'Broom' : { 'east' : 'Corridor',
+            'armario de limpieza' : { 'east' : 'pasillo',
                 #junto a el desodorante e podra quemar una cuerda de plastico duro que cierra un armario en la employee room
-                           'item1' : 'mechero',
-                #al usarlo pillas el tetano el cortauñas
-                           'item2' : 'cortauñas',
+                           'item'  : ["mechero","cortauñas"]
 
             },
 
-            'Employee Room' {'east' : 'Corridor',
+            'sala de empleados' {'este' : 'pasillo',
                  #tendras que usar el mechero junto al desodorante para quemar la cuerda de plastico duro que cierra la puerta
                             'item1': 'armario',
                  #dentro del armario abra un cuchillo (falta saber un uso)
@@ -86,23 +74,24 @@ rooms = {
             }
 
 
-            'Hall' : { 'sur' : 'Kitchen',
-                  'este'  : 'Dining Room',
-                  'item'  : ["key","reloj"],
+            'Recibidor' : { 'sur' : 'Kitchen',
+                  'este'  : 'Comedor',
+                  'norte' : 'pasillo',
+                  'item'  : ["key","reloj"]
                   
                 },        
-            'Cocina' : { 'norte' : 'Hall',
+            'Cocina' : { 'norte' : 'Recibidor',
                   'sur' : 'Despensa',
                   'item'  : ["sopa","monstro"]
                 },
                 
-            'Comedor' : { 'oeste'  : 'Hall',
-                  'Sur' : 'Garden',
+            'Comedor' : { 'oeste'  : 'Recibidor',
+                  'Sur' : 'jardin',
                   'item'  : 'potion'
               
                 },
                 
-            'Garden' : { 'norte' : 'Dining Room' },
+            'jardín' : { 'norte' : 'Comedor' },
             
             # HABITACIONES DE cdeveloper ###### v
             # Puedes ver o tumbarte en la tumbona, si te tumbas, mueres, si la ves, no hace nada
@@ -129,7 +118,7 @@ rooms = {
               },
             # Si coges el paraguas y bajas por las escaleras, mueres.
             # Si l ocoges y te tiras por el balcón, mueres.
-              'Atico' : { 'item' : ["paragüas", "paracaidas"]
+              'Atico' : { 'item' : ["cofre"]
               },
 
             # HABITACIONES DE cdeveloper ####### ^
@@ -178,8 +167,11 @@ while True:
 
   
   # player loses if they enter a room with a monster
-  if 'item' in rooms[currentRoom] and 'monster' in rooms[currentRoom]['item']:
-    print('A monster has got you... GAME OVER!')
+  if 'item' in rooms[currentRoom] and 'monstro' in rooms[currentRoom]['item']:
+    print('te ha comido el monstro... GAME OVER!')
+    break
+  if currentRoom == 'Atico' and 'llave' in inventory and 'potion' in inventory:
+    print('has llegado al atico y has abierto el cofre easy peasy lemon squeezy')
     break
   # player wins if they get to the garden with a key and a shield
   
