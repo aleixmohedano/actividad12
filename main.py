@@ -1,11 +1,15 @@
 #!/bin/python3 SE
 #activar cdeveloper
 <<<<<<< HEAD
+<<<<<<< HEAD
 #activar D I O S (OSEA SDVELOPER)
 =======
 #activar sdeveloper
 #activar mdeveloper
 >>>>>>> origin/mdeveloper
+=======
+#actividad adeveloper
+>>>>>>> origin/adeveloper
 def showInstructions():
     #print a main menu and the commands
     print('''
