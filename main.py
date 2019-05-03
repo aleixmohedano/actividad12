@@ -1,5 +1,6 @@
 #!/bin/python3 SE
 #activar cdeveloper
+#actividad adeveloper
 def showInstructions():
     #print a main menu and the commands
     print('''
