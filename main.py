@@ -1,15 +1,5 @@
 #!/bin/python3 SE
-#activar cdeveloper
-<<<<<<< HEAD
-#activar SDVELOPER
-#activar mdeveloper
-=======
-<<<<<<< HEAD
-#activar D I O S (OSEA SDVELOPER)
-=======
-#activar sdeveloper
-#activar mdeveloper
->>>>>>> origin/mdeveloper
+#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA
 >>>>>>> 9c83d9f0a1f7cea5dfa4af89f21548c910bc4e04
 def showInstructions():
     #print a main menu and the commands
@@ -137,6 +127,9 @@ rooms = {
 	        },
 		#HABITACIUONES DEL DIOS S N V 99
          }
+
+
+#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA#activar cdeveloper ME COMES TODA LA PUTA POLÑLAAAAA
 
 #start the player in the Hall
 currentRoom = 'Hall'
